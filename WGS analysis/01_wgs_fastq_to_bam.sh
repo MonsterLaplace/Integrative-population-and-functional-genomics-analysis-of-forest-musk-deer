@@ -145,7 +145,7 @@ for sample in $samples; do
             -q 15 \
             -u 40 \
             -n 0 \
-            -l 30 \
+            -l 75 \
             -w 8
 
         if [ ! -s "$clean_fq1" ]; then
