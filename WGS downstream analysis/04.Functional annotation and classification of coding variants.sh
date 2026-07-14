@@ -58,10 +58,21 @@ PY
 python calculate_burden_from_site_level_and_vcf.py \
   -s functional_variants_site_level.tsv \
   -v all_samples.snpeff.ann.vcf.gz \
-  -o burden_per_sample.tsv
+  -o genetic_load_per_sample.tsv \
+  --classes LoF missense_severe missense_all
 
-# （4）作图
+# （4）下游分析与作图（和ROH关联分析）
+Rscript compare_genetic_load_domestic_vs_wild.R
+
+python genetic_load_inside_vs_outside_roh.py \
+  -s functional_variants_site_level.tsv \
+  -v all_samples.snpeff.ann.vcf.gz \
+  -r all_samples.roh.bed \
+  -o genetic_load_inside_outside_ROH.tsv \
+  --classes LoF missense_severe missense_all
+
+Rscript plot_genetic_load_inside_outside_roh.R
 
 
-
+  
   
