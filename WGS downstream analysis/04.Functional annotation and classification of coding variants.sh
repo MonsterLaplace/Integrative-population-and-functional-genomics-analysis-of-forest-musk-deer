@@ -72,6 +72,7 @@ python genetic_load_inside_vs_outside_roh.py \
   --classes LoF missense_severe missense_all
 
 Rscript plot_genetic_load_inside_outside_roh.R
+Rscript plot_deleterious_density_genomewide.R
 
 
   
