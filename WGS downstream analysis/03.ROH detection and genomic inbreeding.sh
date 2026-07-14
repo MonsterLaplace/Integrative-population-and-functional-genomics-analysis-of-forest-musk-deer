@@ -22,7 +22,7 @@ plink --bfile all_samples.nomaf \
       --out all_samples.roh
 
 ##################################
-#2. 后续统计处理
+#2. 后续统计处理以及inbreeding计算
 ##################################
 python make_roh_window_frequency.py -r  all_samples.roh.hom -f  FMdeer.primary.fa.fai -o roh_window_frequency.tsv
 python calc_roh_window_frequency.py
