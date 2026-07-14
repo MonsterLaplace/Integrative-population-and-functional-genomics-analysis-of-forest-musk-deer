@@ -339,3 +339,5 @@ python aggregate_ihs_to_windows.py \
     --window 50000 \
     --step 10000
 
+Rscript extract_highconf_window_genes.R
+Rscript integrate_selection_score_autosome_sexchr.R
