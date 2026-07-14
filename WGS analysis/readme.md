@@ -1,5 +1,5 @@
 #####################################
-whole WGS pipeline alpha test version by xubo
+whole WGS pipeline written by xubo
 #####################################
 
 使用前请仔细阅读：
