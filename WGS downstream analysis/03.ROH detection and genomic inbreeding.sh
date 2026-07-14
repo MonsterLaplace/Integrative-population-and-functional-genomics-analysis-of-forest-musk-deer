@@ -24,4 +24,6 @@ plink --bfile all_samples.nomaf \
 ##################################
 #2. 后续统计处理
 ##################################
-
+python make_roh_window_frequency.py -r  all_samples.roh.hom -f  FMdeer.primary.fa.fai -o roh_window_frequency.tsv
+python calc_roh_window_frequency.py
+Rscript plot_roh_final.R
