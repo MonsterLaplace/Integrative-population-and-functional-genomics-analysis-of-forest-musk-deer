@@ -199,6 +199,12 @@ fi
 
 echo "XP-EHH pipeline finished at $(date)" | tee -a "${LOG}"
 
+python aggregate_xpehh_to_windows.py \
+  -i /05.merged/domestic_vs_wild.genome.xpehh.out.norm \
+    -o domestic_vs_wild.xpehh.window.tsv \
+    --window 50000 \
+    --step 10000
+
 ##################################
 #34. iHS
 ##################################
@@ -327,5 +333,9 @@ fi
 
 echo "iHS pipeline finished at $(date)" | tee -a "${LOG}"
 
-
+python aggregate_ihs_to_windows.py \
+  -i /14.ihs_merged/domestic.genome.ihs.out.norm \
+    -o domestic.ihs.window.tsv \
+    --window 50000 \
+    --step 10000
 
